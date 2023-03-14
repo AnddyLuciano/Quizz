@@ -15,8 +15,6 @@ form.addEventListener('submit',function(e){
     for (let i = 1; i < 6; i++) {
         tabResult.push(document.querySelector(`input[name="q${i}"]:checked`).value);
     }
-
-    //console.log(tabResult);
     verif_func(tabResult);
     tabResult = [];
 });
@@ -29,7 +27,6 @@ function verif_func(arrResult){
             verif_tableau.push(false);
     }
 
-    //console.log(verif_tableau);
     afficher_resultat(verif_tableau);
     color_function(verif_tableau);
     verif_tableau = [];
@@ -37,7 +34,6 @@ function verif_func(arrResult){
 
 function afficher_resultat(tabCheck){
     const nbDeFautes = tabCheck.filter(function(el){return  el!== true}).length;
-    //console.log(nbDeFautes);
 
     switch (nbDeFautes) {
         case 0:
